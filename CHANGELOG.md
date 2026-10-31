@@ -5,6 +5,13 @@ Toutes les modifications notables de ce projet CLI seront documentées dans ce f
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com),
 et ce projet adhère à la [Version Sémantique](https://semver.org).
 
+## V0.2.0 - 2026-31-10
+### Edit
+* src/main.cpp
+    - Ajout d'un system pour obtenir le sha256 d'un fichier
+* Readme.md
+    - Ajout de la section, comment les donnés vont être stockée.
+
 ## V0.1.1 - 2026-31-10
 ### Added
 * CHANGELOG.md
