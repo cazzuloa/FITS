@@ -38,6 +38,19 @@ Schema des informations stocker:
   ]
 }
 ```
+## Hachage SHA-256
+
+Utilisation de ```<openssl/evp.h>```, voir https://stackoverflow.com/a/40155962
+
+Exemples avec les fichiers teste :
+
+```bash
+$./fits
+
+"./tests/a.txt" : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+"./tests/.passwd" : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+"./tests/script.sh" : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
 
 ## Changelog
 
