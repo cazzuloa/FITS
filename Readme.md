@@ -54,4 +54,32 @@ $./fits
 
 ## Changelog
 
-Pour l'historique des versions voir Changelog.md
+Pour l'historique des versions voir [CHANGELOG.md](CHANGELOG.md).
+
+Le fichier est généré automatiquement par GitHub Actions lors de la publication
+d'un tag de version :
+
+```bash
+git tag -a v0.3.0 -m "v0.3.0"
+git push origin v0.3.0
+```
+
+Le workflow `.github/workflows/changelog.yml` ajoute alors la section
+correspondante à `CHANGELOG.md`, la commit sur la branche par défaut et publie
+la GitHub Release associée.
+
+Les commits sont classés automatiquement selon leur préfixe :
+
+| Préfixe | Section |
+| --- | --- |
+| `feat:` / `feat :` | Added |
+| `fix:` | Fixed |
+| `docs:` | Documentation |
+| `remove:` / `revert:` | Removed |
+| autre | Edit |
+
+Le script peut aussi être lancé en local pour tester le rendu :
+
+```bash
+.github/scripts/generate-changelog.sh v0.3.0
+```
